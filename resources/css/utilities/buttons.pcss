@@ -1,0 +1,82 @@
+/* reset all button css variables*/
+@define-mixin button-reset {
+    --button-padding: initial;
+
+    --button-bgc: initial;
+    --button-fgc: initial;
+    --button-border: initial;
+    --button-border-colour: initial;
+
+    --button-font-size: initial;
+    --button-line-height: initial;
+
+    --button-hover-bgc: initial;
+    --button-hover-fgc: initial;
+    --button-hover-border: initial;
+}
+
+.buttons {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+
+    &--centred {
+        justify-content: center;
+    }
+}
+
+
+/* purgecss start ignore */
+
+.button {
+    display: inline-block;
+
+    padding: var(--button-padding, 16px 24px);
+
+    background-color: var(--button-bgc, var(--c-primary));
+
+    color: var(--button-fgc, var(--c-white));
+    font-family: var(--font-1-family);
+    font-size: var(--button-font-size, 14px);
+    font-variation-settings: var(--font-1-regular);
+    font-weight: var(--font-1-regular);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: all .1s linear;
+
+    cursor: pointer;
+
+    // TODO - maybe a class?
+    //@media all and (max-width: 450px) {
+    //    width: 100%;
+    //}
+
+    &--solid {
+        &:hover {
+            background-color: var(--button-hover-bgc, var(--c-primary-dark));
+        }
+    }
+
+    &--bordered {
+        padding: var(--button-padding, 14px 22px);
+
+        background-color: var(--button-bgc);
+
+        border: solid 1.5px var(--button-border-colour, var(--c-primary-dark));
+
+        color: var(--button-fgc, var(--c-primary-dark));
+
+        &:hover {
+            background-color: var(--button-hover-bgc, var(--c-primary-dark));
+
+            color: var(--button-hover-fgc, var(--c-white));
+        }
+    }
+}
+
+
+/* purgecss end ignore */

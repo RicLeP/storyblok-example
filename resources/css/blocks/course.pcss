@@ -1,0 +1,35 @@
+
+
+.course {
+    grid-column: full;
+
+    display: grid;
+
+    justify-content: center;
+
+    margin-bottom: 120px;
+    padding: min(16%, 56px) min(5%, 56px);
+
+    background-image: var(--background-image);
+    background-position: center;
+    background-size: cover;
+
+    @media (width >= 700px) {
+        grid-column: xl;
+
+        border-radius: 20px;
+    }
+
+    @media (width >= 1200px) {
+        justify-content: end;
+    }
+
+    &__content {
+        max-width: 670px;
+
+        padding: min(8%, 64px) min(8%, 64px) min(8%, 56px);
+
+        background-color: #fff;
+        border-radius: 20px;
+    }
+}

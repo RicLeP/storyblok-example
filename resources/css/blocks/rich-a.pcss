@@ -1,0 +1,51 @@
+
+
+.rich-a {
+    display: grid;
+
+    align-items: center;
+
+    gap: 50px;
+
+    grid-template-areas: "image" "content";
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    @media all and (min-width: 700px) {
+        grid-template-columns: 7fr 6fr;
+
+        grid-template-areas: "content image";
+    }
+
+    @media all and (min-width: 900px) {
+        gap: 100px;
+    }
+
+    &__content {
+        container-type: inline-size;
+
+        grid-area: content;
+    }
+
+    &__image {
+        grid-area: image;
+
+        max-height: 400px;
+        width: 100%;
+
+        object-fit: cover;
+        object-position: top;
+
+        border-radius: 20px;
+
+        @media all and (min-width: 700px) {
+            max-height: unset;
+            height: 100%;
+        }
+
+        @media all and (min-width: 900px) {
+
+        }
+    }
+}

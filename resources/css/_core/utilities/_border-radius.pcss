@@ -1,0 +1,65 @@
+/*
+These classes are used to add a border radius to an element.
+*/
+
+.br {
+    border-radius: 100%;
+
+    @each $space in var(--spaces) {
+        &-$(space) {
+            border-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-tr-$(space) {
+            border-top-right-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-br-$(space) {
+            border-bottom-right-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-tl-$(space) {
+            border-top-left-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-bl-$(space) {
+            border-bottom-left-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-b-$(space) {
+            border-bottom-left-radius: $(space)px;
+            border-bottom-right-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-t-$(space) {
+            border-top-left-radius: $(space)px;
+            border-top-right-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-l-$(space) {
+            border-top-left-radius: $(space)px;
+            border-bottom-left-radius: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &-r-$(space) {
+            border-top-right-radius: $(space)px;
+            border-bottom-right-radius: $(space)px;
+        }
+    }
+}

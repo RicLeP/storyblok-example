@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^5.0.0",
+        "@fullhuman/vue-cli-plugin-purgecss": "^5.0.0",
+        "@vitejs/plugin-basic-ssl": "^1.0.1",
+        "@vitejs/plugin-vue": "^4.2.3",
+        "autoprefixer": "^10.4.14",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.8.0",
+        "postcss": "^8.2.25",
+        "postcss-comment": "^2.0.0",
+        "postcss-each": "^1.1.0",
+        "postcss-each-variables": "^0.3.0",
+        "postcss-extend": "^1.0.5",
+        "postcss-for": "^2.1.1",
+        "postcss-mixins": "^9.0.4",
+        "postcss-nested": "6.0.1",
+        "postcss-preset-env": "^9.0.0",
+        "vite": "^4.0.0",
+        "vue": "^3.4.15"
+    },
+    "dependencies": {
+        "lodash.debounce": "^4.0.8",
+        "swiper": "^10.0.4"
+    }
+}

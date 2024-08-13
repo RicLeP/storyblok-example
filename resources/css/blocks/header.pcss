@@ -1,0 +1,58 @@
+
+
+.header {
+    padding-top: 40px;
+    padding-bottom: 45px;
+
+    width: 94%;
+    max-width: 1444px;
+
+    &__logo {
+        width: 186px;
+
+        .st0 {
+            fill: #0D0D3F;
+        }
+
+        .st1 {
+            fill: var(--c-primary);
+            stroke: var(--c-grey-10);
+            stroke-width: 9;
+            stroke-dasharray: 103, 191;
+            stroke-dashoffset: 21;
+
+            animation: logo .7s ease-out forwards;
+
+            &:nth-child(13) {
+                animation-delay: .2s;
+            }
+
+            &:nth-child(15) {
+                animation-delay: .4s;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    &__links {
+        display: flex;
+
+        gap: 40px;
+    }
+}
+
+
+@keyframes logo {
+    from {
+        stroke-dashoffset: 21;
+    }
+
+    to {
+        stroke-dashoffset: 117;
+    }
+}

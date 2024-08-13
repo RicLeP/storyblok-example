@@ -1,0 +1,58 @@
+
+
+.text-a {
+    grid-column: m;
+
+    display: grid;
+
+    align-items: center;
+
+    gap: 50px;
+
+    animation-play-state: paused;
+
+    @media (min-width: 700px) {
+        grid-column: xl;
+        grid-template-columns: minmax(300px, 4fr) 5fr;
+    }
+
+    @media (min-width: 1200px) {
+        grid-column: ml;
+
+        gap: 100px;
+    }
+
+    &__key-words {
+        font-size: clamp(32px, 13cqi, 52px);
+
+        & > span {
+            display: block;
+
+            line-height: 1.05;
+
+            animation: slide-in-e .2s ease-in-out .3s backwards;
+            animation-play-state: inherit;
+
+            &:nth-child(2) {
+                margin-left: 2.7ch;
+
+                color: var(--c-primary);
+                font-style: italic;
+
+                animation-delay: .4s;
+            }
+
+            &:nth-child(3) {
+                margin-left: 6.3ch;
+
+                animation-delay: .5s;
+            }
+        }
+    }
+}
+
+/* purgecss start ignore */
+.text-a.anim-play {
+    animation-play-state: running;
+}
+/* purgecss end ignore */

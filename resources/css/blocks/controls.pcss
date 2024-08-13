@@ -1,0 +1,35 @@
+
+
+.form {
+    display: grid;
+    gap: 25px;
+}
+
+.control {
+    display: grid;
+
+    gap: 10px;
+
+    &__label {
+        color: var(--c-grey-80);
+    }
+
+    &__input {
+        padding: 10px;
+
+        background-color: #fff;
+        border: none;
+
+        -webkit-appearance: none;
+
+        &--textarea {
+            height: 150px;
+        }
+
+        &--error {
+            border: solid 2px var(--c-red);
+        }
+    }
+
+
+}

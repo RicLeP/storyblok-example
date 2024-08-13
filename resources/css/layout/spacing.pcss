@@ -1,0 +1,16 @@
+
+:root {
+    --s-none: 0;
+    //--s-large: 124px;
+    --s-large: clamp(70px, 13vh, 124px);
+    --s-small: clamp(60px, 6vh, 100px);
+}
+
+
+/*
+--lpt & --lpb come from the template and App\Storyblok\Fields\Layout
+*/
+.l-spacing {
+    display: grid;
+    gap: var(--ls, var(--s-small));
+}

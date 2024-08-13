@@ -1,0 +1,153 @@
+/*
+Specify all the typographic styles that are going to be reused.
+*/
+
+html, body {
+    font-family: var(--font-1-family);
+
+    font-size: 17px;
+    font-weight: var(--font-1-light);
+}
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+/* purgecss start ignore */
+
+i {
+    display: inline-block;
+
+    margin-right: .5ch;
+    margin-left: -.2ch;
+
+    transform: skewX(5deg)
+}
+
+/* purgecss end ignore */
+
+
+
+.link {
+    display: block;
+
+    &:hover {
+    }
+}
+
+
+
+/*
+Type styles for all major reusable typographic elements.
+If type is very context reliant for styling such as heroes that scale a lot with
+the screen size then create their styles within the block itself
+*/
+.t-1 {
+    font-family: var(--font-1-family);
+    font-size: 58px;
+    font-weight: var(--font-1-regular);
+    letter-spacing: -.05ch;
+    line-height: calc(66 / 58);
+
+    &--r {
+        font-size: clamp(40px, 8.5cqi, 58px);
+    }
+}
+
+.t-2 {
+    font-family: var(--font-1-family);
+    font-size: 44px;
+    font-weight: var(--font-1-regular);
+    letter-spacing: -.05ch;
+    line-height: calc(50 / 44);
+
+    &--r {
+        font-size: clamp(32px, 4cqi, 44px);
+    }
+}
+
+.t-3 {
+    font-family: var(--font-1-family);
+    font-size: 32px;
+    font-weight: var(--font-1-regular);
+    letter-spacing: -.05ch;
+    line-height: calc(40 / 32);
+}
+
+.t-4 {
+    font-family: var(--font-1-family);
+    font-size: 26px;
+    font-weight: var(--font-1-regular);
+    letter-spacing: -.05ch;
+    line-height: calc(36 / 26);
+
+    &--r {
+        font-size: clamp(22px, 5vw, 26px);
+    }
+}
+
+.t-5 {
+    font-family: var(--font-1-family);
+    font-size: 17px;
+    font-weight: var(--font-1-regular);
+    letter-spacing: -.05ch;
+    line-height: calc(25 / 17);
+}
+
+
+.t-6 {
+    font-family: var(--font-1-family);
+    font-size: 13px;
+    font-weight: var(--font-1-regular);
+    line-height: calc(18 / 13);
+}
+
+
+.t-columns {
+    column-count: 2;
+    column-gap: 32px;
+    column-fill: balance;
+}
+
+.t-ruled-list, .t-ruled-list > ul {
+    list-style-type: none;
+
+    & li:not(:last-child) {
+        margin-bottom: .8em;
+        padding-bottom: .8em;
+
+        border-bottom: solid 1px currentColor;
+    }
+}
+
+/* Helper for each font used on the website. Use these only when a .t-# style doesn’t fit*/
+.f-1 {
+    font-family: var(--font-1-family);
+}
+
+.t-regular {
+    font-weight: var(--font-1-regular);
+}
+
+.t-bold {
+    font-weight: var(--font-1-bold);
+}
+
+.t-pill {
+    display: inline-block;
+
+    padding: 11px 24px;
+
+    background-color: var(--pill-bg, var(--c-red));
+    border-radius: 12px;
+
+    color: var(--pill-fg, var(--c-white));
+}
+
+.t-uppercase {
+    letter-spacing: .05ch;
+}

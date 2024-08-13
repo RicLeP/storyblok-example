@@ -1,0 +1,52 @@
+
+
+.person {
+    grid-column: l;
+
+    display: grid;
+
+    align-items: center;
+    gap: 50px;
+
+    @media all and (min-width: 850px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (min-width: 1000px) {
+        grid-column: xl;
+    }
+
+    @media all and (min-width: 1240px) {
+        grid-column: l;
+        grid-template-columns: max-content 1fr;
+    }
+
+    @media all and (min-width: 1500px) {
+        grid-column: ml;
+    }
+
+    &__image {
+        aspect-ratio: 6.5 / 5;
+        height: 100%;
+        width: 100%;
+
+        border-radius: 20px;
+
+        object-fit: cover;
+        object-position: top;
+
+        @media all and (min-width: 850px) {
+            aspect-ratio: 9 / 10;
+
+            min-height: 300px;
+            max-width: 450px;
+
+            @supports (animation-timeline: scroll()) {
+                animation: parallax linear 3s;
+                animation-timeline: scroll();
+                --parallax-speed: -.4;
+                --parallax-offset: 50px;
+            }
+        }
+    }
+}

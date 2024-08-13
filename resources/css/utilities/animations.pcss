@@ -1,0 +1,101 @@
+/* purgecss start ignore */
+
+:root {
+  --a-delay: 0s;
+  --a-duration: 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.a-fade-in {
+    animation: fade-in var(--a-duration) ease-in-out var(--a-delay) backwards;
+}
+
+@each $duration in 50, 60, 70, 80, 90, 100, 120, 150, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800, 900, 1000 {
+    .a-delay-$(duration) {
+        --a-delay: $(duration)ms;
+    }
+}
+
+@keyframes slide-in-e {
+  from {
+      opacity: 0;
+
+      transform: translate3d(50px, 0, 0);
+  }
+  to {
+      opacity: 1;
+
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.a-slide-in-e {
+    animation: slide-in-e var(--a-duration, 200ms) ease-in-out .6s backwards;
+}
+
+@keyframes slide-in-w {
+  from {
+      opacity: 0;
+
+      transform: translate3d(50px, 0, 0);
+  }
+  to {
+      opacity: 1;
+
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.a-slide-in-w {
+    animation: slide-in-w var(--a-duration) ease-in-out .6s backwards;
+}
+
+@keyframes slide-in-n {
+  from {
+      opacity: 0;
+
+      transform: translate3d(0, 20px, 0);
+  }
+  to {
+      opacity: 1;
+
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.a-slide-in-n {
+    animation: slide-in-n var(--a-duration) ease-in-out .6s backwards;
+}
+
+
+// animates circle mask on images
+// triggers on entering viewpoint and adding .anin-play class to element
+
+.anim {
+    animation-play-state: paused;
+}
+
+.anim.anim-play {
+    animation-play-state: running;
+}
+
+@keyframes parallax {
+    from {
+        translate: 0 var(--parallax-offset);
+    }
+
+    to {
+        translate: 0 calc(var(--parallax-speed) * 100px);
+    }
+}
+
+
+/* purgecss end ignore */

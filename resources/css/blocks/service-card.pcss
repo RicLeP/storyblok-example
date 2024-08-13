@@ -1,0 +1,23 @@
+
+
+.service-card {
+    @media all and (min-width: 750px) {
+        grid-row: 1 / span 3;
+
+        display: grid;
+
+        grid-template-rows: subgrid;
+    }
+
+    padding: 40px 40px 50px;
+
+    background: #fff;
+    border-radius: 20px;
+
+    @supports (animation-timeline: scroll()) {
+        animation: parallax linear 3s;
+        animation-timeline: scroll();
+        --parallax-speed: -.7;
+        --parallax-offset: 100px;
+    }
+}

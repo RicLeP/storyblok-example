@@ -1,0 +1,28 @@
+
+
+.sub-service {
+    display: grid;
+
+    gap: 20px 46px;
+
+    grid-template-columns: 1fr;
+
+    margin-bottom: 45px;
+    padding-top: 40px;
+
+    border-top: solid 2px var(--c-grey-20);
+
+    @media all and (min-width: 500px) {
+        grid-template-columns: max-content 1fr;
+    }
+
+    @media all and (min-width: 750px) {
+        grid-template-columns: max-content 1fr 2fr;
+    }
+
+    &__description {
+        @media all and (min-width: 500px) and (max-width: 749px) {
+            grid-column: span 2;
+        }
+    }
+}

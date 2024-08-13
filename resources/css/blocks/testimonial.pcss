@@ -1,0 +1,31 @@
+
+.testimonial {
+    display: grid;
+
+    gap: 40px;
+
+    @media all and (min-width: 650px) {
+        grid-template-columns: max-content 1fr;
+    }
+
+    &__quotemark {
+        g {
+            @supports (animation-timeline: scroll()) {
+                animation: testimonial linear 3s backwards;
+                animation-timeline: view(block);
+                animation-range: cover 10% cover 30%;
+            }
+        }
+    }
+}
+
+
+@keyframes testimonial {
+    from {
+        clip-path: circle(0px at center 40px);
+    }
+
+    to {
+        clip-path: circle(50px at center 40px);
+    }
+}

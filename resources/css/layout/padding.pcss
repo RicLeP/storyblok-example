@@ -1,0 +1,23 @@
+
+:root {
+    --p-xlarge: clamp(90px, 19vh, 200px);
+    --p-large: clamp(80px, 13vh, 150px);
+    --p-medium: clamp(70px, 9vh, 100px);
+    --p-small: clamp(60px, 6vh, 80px);
+}
+
+/*
+--lpt & --lpb come from the template and App\Storyblok\Fields\Layout
+*/
+.l-padding {
+    padding-top: var(--lpt, var(--p-large));
+    padding-bottom: var(--lpb, var(--p-large));
+}
+
+.l-t-padding {
+    padding-top: var(--lpt, var(--p-large));
+}
+
+.l-b-padding {
+    padding-bottom: var(--lpb, var(--p-large));
+}

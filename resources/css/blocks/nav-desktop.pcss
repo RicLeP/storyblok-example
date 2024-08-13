@@ -1,0 +1,47 @@
+
+
+
+.nav-desktop {
+    position: fixed;
+
+    transform: translateX(-100%);
+    top: 24px;
+
+    z-index: 1000;
+
+    &__nav {
+        display: flex;
+
+        gap: 30px;
+
+        padding: 0 20px 6px;
+
+        background-color: var(--c-grey-10);
+        border-radius: 8px;
+
+        transform: translate3d(0, 0, 0);
+        transition: transform .3s ease-out;
+
+        &--hidden {
+            transform: translate3d(0, -76px, 0);
+        }
+    }
+
+    &__item {
+        padding: 16px 0 8px;
+
+        border-bottom: solid 2px transparent;
+
+        color: inherit;
+
+        &:hover, &--active {
+            border-bottom: solid 2px var(--c-primary);
+        }
+
+        &--active {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+
+
+.contact {
+    min-height: 80vh;
+
+    &__header {
+        grid-column: full;
+
+        background: linear-gradient(74deg, rgba(12,20,57,1) 0%, rgb(51, 74, 196) 100%);
+
+        @media all and (min-width: 880px) {
+            grid-column: full-start / center;
+        }
+    }
+
+    &__image {
+        aspect-ratio: 1;
+
+        /////////////aspect-ratio: 1 / 43;
+
+        @media all and (min-width: 450px) and (max-width: 879px) {
+            aspect-ratio: 2 / 1;
+        }
+
+        @media all and (min-width: 880px){
+            aspect-ratio: unset;
+        }
+
+        grid-column: 1 / -1;
+        grid-row: 1;
+
+        height: 100%;
+        width: 100%;
+
+        object-fit: fill;
+    }
+
+    &__title {
+        container-type: inline-size;
+
+        grid-row: 1;
+
+        padding-right: 6%;
+    }
+
+    &__content {
+        grid-column: xl;
+
+        display: grid;
+        width: 100%;
+
+        @media all and (min-width: 880px) {
+            grid-column: center / xl;
+
+            justify-items: center;
+
+            padding: 30px;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    &__sent {
+        display: grid;
+
+        align-items: center;
+
+        gap: 20px;
+        grid-template-columns: max-content 1fr;
+    }
+}
